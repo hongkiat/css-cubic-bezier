@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>
+Rocket Speed - Hongkiat.com
+</title>
+
+<!--  jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script>
+
+<!-- demo scripts -->
+<link rel="stylesheet" href="styles.css">
+
+<!-- nav script -->
+<script src="../_nav/js/nav.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- nav meta -->
+<div class="demo-meta">
+  <h1 class="demo-title">CSS Cubic Bezier</h1>
+  <p class="demo-desc">Using cubic-bezier to create custom animation speed</p>
+</div>
+
+<!-- demo content -->
+<a class="rocket-launch" href="#">Hover Me!</a>
+<div class="rocket">
+	<img src="images/rocket.png" width="128" height="128">
+</div>
+
+<div class="rocket-code">
+<pre>
+a {
+	display: inline-block;
+	width: 110px;
+	height: 30px;
+	color: #fff;
+	text-align: center;
+	font: bold 10pt Arial, sans-serif;
+	text-decoration: none;
+	border-radius: 2px;
+	text-shadow:0px 1px 1px rgba(0,0,0,.5);
+	line-height: 30px;
+	margin: 0px 5px;
+	box-shadow: inset 0px 1px 0px rgba(250,250,250,.3), 0px 1px 1px rgba(0,0,0,.1) ;
+	border: 1px solid #8eac52;
+	background: #c8e183;
+	background: -moz-linear-gradient(top, #c8e183 0%, #a0cb58 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c8e183), color-stop(100%,#a0cb58));
+	background: -webkit-linear-gradient(top, #c8e183 0%,#a0cb58 100%);
+	background: -o-linear-gradient(top, #c8e183 0%,#a0cb58 100%);
+	background: -ms-linear-gradient(top, #c8e183 0%,#a0cb58 100%);
+	background: linear-gradient(top, #c8e183 0%,#a0cb58 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8e183', endColorstr='#a0cb58',GradientType=0 );
+}
+a:hover {
+	background: #c8e183;
+	background: -moz-linear-gradient(top, #a0cb58 0%, #c8e183 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a0cb58), color-stop(100%,#c8e183));
+	background: -webkit-linear-gradient(top, #a0cb58 0%, #c8e183 100%);
+	background: -o-linear-gradient(top, #a0cb58 0%, #c8e183 100%);
+	background: -ms-linear-gradient(top, #a0cb58 0%, #c8e183 100%);
+	background: linear-gradient(top, #a0cb58 0%, #c8e183 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a0cb58', endColorstr='#c8e183',GradientType=0 );
+}
+.rocket {
+	width:128px;
+	height:128px;
+	position: absolute;
+	left: 45%;
+	bottom: 25px;
+}
+a:hover + .rocket {
+	-webkit-transform: translateY(-700px);
+	-moz-transform: translateY(-700px);
+	-ms-transform: translateY(-700px);
+	-o-transform: translateY(-700px);
+	transform: translateY(-700px);
+
+	-webkit-transition: all 3s cubic-bezier(.98,0,1,.28);
+	-moz-transition: all 3s cubic-bezier(.98,0,1,.28);
+	-o-transition: all 3s cubic-bezier(.98,0,1,.28);
+	transition: all 3s cubic-bezier(.98,0,1,.28);
+}
+pre {
+	overflow: scroll;
+	width: 300px;
+	height: 300px;
+	border: 1px solid #ccc;
+}
+</pre>
+</div>
+
+</body>
+</html>
